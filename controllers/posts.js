@@ -10,16 +10,11 @@ const posts = {
     handleSuccess(res, allPosts);
     res.end();
   },
-  async createPosts(body, req, res) {
+  async createPosts(req, res) {
+    const data = req.body;
     try {
       const newPost = await Posts.create({
-        name: body.name,
-        content: body.content,
-        tags: body.tags,
-        type: body.type,
-        likes: body.likes,
-        image: body.image,
-        comments: body.comments,
+        ...data,
       });
       handleSuccess(res, newPost);
     } catch (err) {
