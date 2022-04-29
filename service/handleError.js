@@ -12,11 +12,10 @@ const handleError = (res, status, errorCode, message) => {
   const displayMessage =
     errorCodeMessage[status][errorCode] || errorCodeMessage[status];
 
-  res
-    .send({
-      status: 'false',
-      message: displayMessage,
-    })
-    .end();
+  res.send({
+    status: 'false',
+    message: displayMessage,
+  });
+  res.end();
 };
 module.exports = handleError;

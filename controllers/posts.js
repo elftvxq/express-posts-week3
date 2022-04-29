@@ -12,20 +12,16 @@ const posts = {
   },
   async createPosts(body, req, res) {
     try {
-      if (body.content) {
-        const newPost = await Posts.create({
-          name: body.name,
-          content: body.content,
-          tags: body.tags,
-          type: body.type,
-          likes: body.likes,
-          image: body.image,
-          comments: body.comments,
-        });
-        handleSuccess(res, newPost);
-      } else {
-        handleError(res);
-      }
+      const newPost = await Posts.create({
+        name: body.name,
+        content: body.content,
+        tags: body.tags,
+        type: body.type,
+        likes: body.likes,
+        image: body.image,
+        comments: body.comments,
+      });
+      handleSuccess(res, newPost);
     } catch (err) {
       handleError(res, 400, 40002, err.message);
     }
