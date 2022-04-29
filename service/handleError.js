@@ -13,7 +13,6 @@ const handleError = (res, status, errorCode, message) => {
     errorCodeMessage[status][errorCode] || errorCodeMessage[status];
 
   res
-    .status(400)
     .send({
       status: 'false',
       message: displayMessage,
