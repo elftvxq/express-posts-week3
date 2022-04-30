@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "73b55192-821e-49f0-9efb-330ade97e1ee",
+		"name": "express-posts-week3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"田囧菇\",\n    \"tags\": [\n        \"吃貨\"\n    ],\n    \"type\": \"person\",\n    \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\n    \"content\": \"我一個人可以吃掉七碗泡麵\",\n    \"likes\": 8932,\n    \"comments\": 775\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-shelf-14026.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"stark-shelf-14026",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-shelf-14026.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"stark-shelf-14026",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3005/todos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3005",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://whispering-chamber-65590.herokuapp.com/api/posts/id",
+					"protocol": "https",
+					"host": [
+						"whispering-chamber-65590",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Rap Monster\",\n    \"content\": \"Boyz with Luv\",\n    \"tags\":[\"PD\"],\n    \"type\":\"person\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://whispering-chamber-65590.herokuapp.com/api/posts/626cdaca82f29df80057242d",
+					"protocol": "https",
+					"host": [
+						"whispering-chamber-65590",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"626cdaca82f29df80057242d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
