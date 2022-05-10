@@ -12,7 +12,8 @@ const handleError = (res, status, errorCode, message) => {
   const displayMessage =
     errorCodeMessage[status][errorCode] || errorCodeMessage[status];
 
-  res.send({
+  // add error status
+  res.status(status).send({
     status: 'false',
     message: displayMessage,
   });
